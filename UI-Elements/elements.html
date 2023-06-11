@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <link href="/splintzerElements.css" rel="stylesheet">
+    <script src="/elements.js" type="module" ></script>
+</head>
+<body>
+
+ 
+    <h5 class="h3 text-regular">This is pre built UI elements u can just copy paste the code</h4>
+        <hr>
+        <div class="container border shadow p-4 rounded-05">
+            <h6>Email validation</h6>
+        <p>this email raw email input is prevalidated , this input wont take other then email as a input and will throw an error <br>
+        you can get the valid or invalid attribute as "inputValid" it returns values in boolean <br>
+        to add this auto validation you just need to add input tag and any text tag and add id as "email-input" and "email-error"</p>
+        <input id="email-input" placeholder="email">
+        <p id="email-error">Email incorrect</p>
+    </div>
+    <hr>
+
+    <hr>
+    <div class="container border shadow p-4 rounded-05">
+        <h6>Password validation</h6>
+    <p>This raw password validation validates 5 factors , it validates character or symbol , number , capital letter , small letter and lentgh of value<br> 
+    you nly need to add id to your input tag and password error text tag , if you wish to change the UI or wish to change UI error message as per your need <br>
+    then you can take our custom input attribute "validateChar" , "validateNumber", "validateLower","validateCaps".<br>
+    it is prefered to use "Element.getAttribute('validateChar')" function which will return boolean values.</p>
+    <input  id="password-input" placeholder="password" >
+    <p id="password-error"></p>
+    <button onclick="let io = document.getElementById('password-input'); console.log(io.getAttribute('validateCaps'),io.getAttribute('validateNumber'),io.getAttribute('validateLower') , io.getAttribute('validateChar'))">click</button>
+</div>
+<hr>
+
+<hr>
+<div class="container border shadow p-4 rounded-05">
+    <h6>Number validation</h6>
+<p>this number validation field will take only numbers as input and no character or alphabets , other then this it will have an error mssg which will be toggled on errors , <br>
+you can set max length of your input in "data-se-length" attribute , and you should give class as phone-input and give data-se-msgId as the targeted error message </p>
+<input data-se-length="10" data-se-msgId="phone-error" class="phone-input" placeholder="Phone number" >
+<p id="phone-error">Please enter atleast 10 digits</p>
+
+
+</div>
+<hr>
+
+</body>
+</html>
