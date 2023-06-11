@@ -1,14 +1,7 @@
 import {input} from './Functions/inputs/input.js'
 
 
-export class SplintzerElements {
-    constructor(){
-      function init(){
-            input();
-        }
-    }
-}
-
+export default{input}
 
 
 
