@@ -1,6 +1,8 @@
 import {input} from './Functions/inputs/input.js'
-  input()
 
+export function init(){
+  input();
+}
 
 
 
