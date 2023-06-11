@@ -4,6 +4,6 @@ Splintzer technologies created latest UI elements which are created using bootst
 
 import css using 
 
-<link rel="stylesheet" href="https://splintzer-technologies.github.io/Ui-elements/splintzerElements.css" >
+<link rel="stylesheet" href="https://splintzer-technologies.github.io/Ui-elements/splintzerElements.css" ></lilnk>
 import js using 
-<script src="https://splintzer-technologies.github.io/Ui-elements/elements.js type="module">
+<script src="https://splintzer-technologies.github.io/Ui-elements/elements.js type="module"></script>
