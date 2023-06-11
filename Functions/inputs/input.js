@@ -5,7 +5,7 @@ export async function input() {
             clearInterval(a);
             checkEmail();
             checkPassword();
-            checkPhone()
+            checkPhone() 
         }
     }, 100)
   
