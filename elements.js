@@ -1,8 +1,7 @@
 import {input} from './Functions/inputs/input.js'
 
 
-export default{input}
-
+input();
 
 
 //======================================================
