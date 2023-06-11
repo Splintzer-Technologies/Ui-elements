@@ -1,7 +1,15 @@
 import {input} from './Functions/inputs/input.js'
 
-export function init(){
-  input();
+export class splintzer {
+
+    constructor(){
+
+        function init(){
+            input();
+        }
+    }
+
+   
 }
 
 
