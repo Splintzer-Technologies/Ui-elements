@@ -11,7 +11,7 @@ function checkPhone(){
   
 
     phoneElement.forEach(el=>{
-        
+    
        
         el.addEventListener('input', function(event) {
             let phoneLength = parseInt(el.getAttribute('data-se-length'))
@@ -31,8 +31,8 @@ function checkPhone(){
           });
           let id = el.getAttribute('data-se-msgId')
           var phoneErrorElement = document.getElementById(id);
-          phoneErrorElement.style.display='none'
-          el.addEventListener('mouseleave',()=>{
+          phoneErrorElement?.style?.display='none'
+          el.addEventListener( 'mouseout',()=>{
             
             let phoneLength = parseInt(el.getAttribute('data-se-length'))
             if(el.value.length<phoneLength){
@@ -58,11 +58,11 @@ function checkEmail() {
 
     var emailElement = document.getElementById('email-input');
     var emailErrorElement = document.getElementById('email-error');
-    emailErrorElement.style.display = 'none';
+    emailErrorElement?.style?.display = 'none';
     emailElement.setAttribute('inputValid', false)
 
-    emailElement.addEventListener('mouseleave', () => {
-
+    document.addEventListener('mouseleave', (event) => {
+        
         if (!emailRegExp.test(emailElement.value)) {
             emailErrorElement.style.display = 'block';
             emailElement.setAttribute('inputValid', false)
@@ -84,7 +84,7 @@ function checkPassword() {
     passElement.setAttribute('validateNumber', false)
     passElement.setAttribute('validateCaps', false)
     passElement.setAttribute('validateLower', false)
-
+    passElement?.style?.display='none'
 
     passElement.addEventListener('mouseleave', () => {
         passwordMouseOut = true;
