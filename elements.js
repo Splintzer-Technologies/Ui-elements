@@ -1,9 +1,13 @@
 import {input} from './Functions/inputs/input.js'
 
-document.addEventListener('DOMContentLoaded', ()=>{
-    alert('hell')
-  input()
-})
+
+export class SplintzerElements {
+    constructor(){
+      function init(){
+            input();
+        }
+    }
+}
 
 
 
