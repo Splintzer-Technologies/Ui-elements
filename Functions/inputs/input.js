@@ -70,7 +70,7 @@ function checkEmail() {
             emailErrorElement.style.display = 'none';
             emailElement.setAttribute('inputValid', true)
         }
-    })
+    }) 
 }
 
 //======================================================
