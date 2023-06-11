@@ -1,0 +1,111 @@
+
+/*=========================================
+    For border radius 
+============================================ */
+.rounded-05{
+    border-radius: 5%;
+}
+
+.rounded-20{
+    border-radius: 20%;
+}
+
+.rounded-10{
+    border-radius: 10%;
+}
+
+.rounded-30{
+    border-radius: 30%;
+}
+
+/*=========================================
+    For shadows 
+============================================ */
+.shadow-light{
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.255);
+}
+
+.shadow-medium{
+    box-shadow: 0px 3px 4px 0px rgba(9, 9, 9, 0.481);
+}
+
+.shadow-dark{
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.718);
+}
+
+
+/*=========================================
+    For Boxes
+============================================ */
+.box-1{
+    border-bottom: 2px solid #007bff;
+    box-shadow: 0px 3px 4px 0px rgba(9, 9, 9, 0.481);
+    border-radius: 10%;
+}
+
+.box-2{
+    border-left: 4px solid #007bff;
+    box-shadow: 0px 3px 4px 0px rgba(9, 9, 9, 0.481);
+    border-radius: 0% 5% 5% 0%;
+}
+
+.box-3{
+    border-top: 4px solid #007bff;
+    border-bottom: 4px solid #007bff;
+    box-shadow: 0px 3px 4px 0px rgba(9, 9, 9, 0.481);
+}
+
+.box-4{
+    border: 2px double #000000;
+
+}
+.box-5{
+    border-left: 5px double #007bff;
+    box-shadow: 0px 3px 4px 0px rgba(9, 9, 9, 0.481);
+}
+.box-6{
+    border: 2px dashed #000000;
+    /* box-shadow: 0px 3px 4px 0px rgba(9, 9, 9, 0.481); */
+}
+.box-7{
+    border:  5px groove #007bff;
+    /* box-shadow: 0px 3px 4px 0px rgba(9, 9, 9, 0.481); */
+}.box-8{
+    border: 6px outset #000000;
+    /* box-shadow: 0px 3px 4px 0px rgba(9, 9, 9, 0.481); */
+}
+
+/*=========================================
+    For box theme colors
+============================================ */
+.box-primary{
+    border-color: #007bff;
+}
+
+.box-primary{
+    border-color: #007bff;
+}
+.box-warning{
+    border-color: #ffc107;
+}
+.box-info{
+    border-color: #17a2b8;
+}
+.box-danger{
+    border-color: #d33545;
+}
+.box-secondary{
+    border-color: #6c757d;
+}
+.box-success{
+    border-color: #28a745;
+}
+.box-dark{
+    border-color: #343a40;
+}
+.box-black{
+    border-color: #000000;
+}
+.box-white{
+    border-color: #ffffff;
+}
