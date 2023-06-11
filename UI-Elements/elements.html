@@ -19,7 +19,8 @@
             <h6>Email validation</h6>
         <p>this email raw email input is prevalidated , this input wont take other then email as a input and will throw an error <br>
         you can get the valid or invalid attribute as "inputValid" it returns values in boolean <br>
-        to add this auto validation you just need to add input tag and any text tag and add id as "email-input" and "email-error"</p>
+        to add this auto validation you just need to add input tag and any text tag and add id as "email-input" and "email-error".<br>
+        note !! only one validation can be attached on a single viewed page per ID</p>
         <input id="email-input" placeholder="email">
         <p id="email-error">Email incorrect</p>
     </div>
@@ -31,7 +32,8 @@
     <p>This raw password validation validates 5 factors , it validates character or symbol , number , capital letter , small letter and lentgh of value<br> 
     you nly need to add id to your input tag and password error text tag , if you wish to change the UI or wish to change UI error message as per your need <br>
     then you can take our custom input attribute "validateChar" , "validateNumber", "validateLower","validateCaps".<br>
-    it is prefered to use "Element.getAttribute('validateChar')" function which will return boolean values.</p>
+    it is prefered to use "Element.getAttribute('validateChar')" function which will return boolean values.<br>
+note !! only one validation can be attached on a single viewed page per ID</p>
     <input  id="password-input" placeholder="password" >
     <p id="password-error"></p>
     <button onclick="let io = document.getElementById('password-input'); console.log(io.getAttribute('validateCaps'),io.getAttribute('validateNumber'),io.getAttribute('validateLower') , io.getAttribute('validateChar'))">click</button>
