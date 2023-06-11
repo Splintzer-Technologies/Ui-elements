@@ -1,51 +1,63 @@
-export function input() {
-    checkEmail();
-    checkPassword();
-    checkPhone()
+export async function input() {
+
+    var a = setInterval(() => {
+        if (document.readyState == 'complete') {
+            clearInterval(a);
+            checkEmail();
+            checkPassword();
+            checkPhone()
+        }
+    }, 100)
+  
+
+
 }
 
 
-function checkPhone(){
+
+function checkPhone() {
     var phoneElement = document.querySelectorAll('.phone-input');
-    
-  
 
-    phoneElement.forEach(el=>{
-        
-       
-        el.addEventListener('input', function(event) {
-            let phoneLength = parseInt(el.getAttribute('data-se-length'))
+    if(phoneElement){
 
-            const inputValue = event.target.value;
-            const anyCharacterRegex = /[-!$%^&*()_+@|~=`{}\[\]:";'<>?,.\/]/;
-            const lowercaseRegex = /[a-z]/;
-            const uppercaseRegex = /[A-Z]/;
-            if(lowercaseRegex.test(inputValue) || uppercaseRegex.test(inputValue) || anyCharacterRegex.test(inputValue) ){
-                event.preventDefault()
-                event.target.value = inputValue.slice(0, inputValue.length-1);
-            }
-            if (inputValue.length > phoneLength) {
-              event.preventDefault();
-              event.target.value = inputValue.slice(0, phoneLength);
-            }
-          });
-          let id = el.getAttribute('data-se-msgId')
-          var phoneErrorElement = document.getElementById(id);
-          phoneErrorElement.style.display='none'
-          el.addEventListener('mouseleave',()=>{
-            
-            let phoneLength = parseInt(el.getAttribute('data-se-length'))
-            if(el.value.length<phoneLength){
-                phoneErrorElement.style.display='block'
-            }else{
-                phoneErrorElement.style.display='none'
-            }
-          })
+        phoneElement.forEach(el => {
+
+
+            el.addEventListener('input', function (event) {
+                let phoneLength = parseInt(el.getAttribute('data-se-length'))
+    
+                const inputValue = event.target.value;
+                const anyCharacterRegex = /[-!$%^&*()_+@|~=`{}\[\]:";'<>?,.\/]/;
+                const lowercaseRegex = /[a-z]/;
+                const uppercaseRegex = /[A-Z]/;
+                if (lowercaseRegex.test(inputValue) || uppercaseRegex.test(inputValue) || anyCharacterRegex.test(inputValue)) {
+                    event.preventDefault()
+                    event.target.value = inputValue.slice(0, inputValue.length - 1);
+                }
+                if (inputValue.length > phoneLength) {
+                    event.preventDefault();
+                    event.target.value = inputValue.slice(0, phoneLength);
+                }
+            });
+            let id = el.getAttribute('data-se-msgId')
+            var phoneErrorElement = document.getElementById(id);
+            phoneErrorElement.style.display = 'none'
+            el.addEventListener('mouseleave', () => {
+    
+                let phoneLength = parseInt(el.getAttribute('data-se-length'))
+                if (el.value.length < phoneLength) {
+                    phoneErrorElement.style.display = 'block'
+                } else {
+                    phoneErrorElement.style.display = 'none'
+                }
+            })
     
     
-    })
+        })
+    
+    }
 
-  
+
 }
 
 
@@ -55,9 +67,11 @@ function checkPhone(){
 //=====================================================
 function checkEmail() {
     const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    const emailElement = document.getElementById('email-input');
 
-    var emailElement = document.getElementById('email-input');
-    var emailErrorElement = document.getElementById('email-error');
+    if(emailElement){
+
+    const emailErrorElement = document.getElementById('email-error');
     emailErrorElement.style.display = 'none';
     emailElement.setAttribute('inputValid', false)
 
@@ -70,7 +84,8 @@ function checkEmail() {
             emailErrorElement.style.display = 'none';
             emailElement.setAttribute('inputValid', true)
         }
-    }) 
+    })
+}
 }
 
 //======================================================
@@ -80,6 +95,7 @@ let passwordMouseOut = false;
 function checkPassword() {
 
     var passElement = document.getElementById('password-input');
+    if(passElement){
     passElement.setAttribute('validateChar', false)
     passElement.setAttribute('validateNumber', false)
     passElement.setAttribute('validateCaps', false)
@@ -97,6 +113,7 @@ function checkPassword() {
             passwordCheckExtended(passElement);
         }
     })
+}
 }
 
 function passwordCheckExtended(passElement) {
@@ -124,12 +141,12 @@ function passwordCheckExtended(passElement) {
                     passElement.setAttribute('validateChar', true)
                     passErrorElement.style.display = 'none';
 
-                    if(passElement.value.length>8){
-                        passErrorElement.style.display = 'none'; 
-                    }else{
+                    if (passElement.value.length > 8) {
+                        passErrorElement.style.display = 'none';
+                    } else {
                         passErrorElement.style.display = 'block';
                         passErrorElement.innerHTML = 'Password length should be greater then 8'
-                    
+
                     }
                 }
                 else {
