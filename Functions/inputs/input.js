@@ -5,7 +5,7 @@ export async function input() {
             clearInterval(a);
             checkEmail();
             checkPassword();
-            checkPhone() 
+            checkPhone()
         }
     }, 100)
   
@@ -95,7 +95,10 @@ let passwordMouseOut = false;
 function checkPassword() {
 
     var passElement = document.getElementById('password-input');
+    
     if(passElement){
+        var passErrorElement = document.getElementById('password-error')
+        passErrorElement.style.display='none'
     passElement.setAttribute('validateChar', false)
     passElement.setAttribute('validateNumber', false)
     passElement.setAttribute('validateCaps', false)
@@ -124,7 +127,7 @@ function passwordCheckExtended(passElement) {
     const uppercaseRegex = /[A-Z]/;
 
     var passErrorElement = document.getElementById('password-error')
-
+    
     if (uppercaseRegex.test(passElement.value)) {
         passElement.setAttribute('validateCaps', true)
         passErrorElement.style.display = 'none';

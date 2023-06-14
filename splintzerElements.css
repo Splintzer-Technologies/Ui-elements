@@ -1,5 +1,7 @@
 @import url('elements/splintzerElementsText.css');
 @import url('elements/boxes/boxes.css');
+@import url('animations/transitions.css');
+@import url('util/util.css');
 
 /* .popupItem{
     display: none;
