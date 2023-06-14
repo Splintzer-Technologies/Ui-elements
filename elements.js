@@ -1,6 +1,6 @@
 import {input} from './Functions/inputs/input.js'
 
-
+ 
 document.addEventListener('DOMContentLoaded', ()=>{
   input()
 })
